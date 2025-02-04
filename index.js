@@ -9,7 +9,7 @@ const questions = [
 { type: 'input', name: 'link' , message: "Insert a link to your Github homepage."},
 { type: 'input', name: 'title' , message: "What is the name of your project?"},
 { type: 'input', name: 'description' , message: "Provide a brief description of your project (motivation, what problem did you solve, etc."},
-{ type: 'input', name: 'installation' , message: "How does someone install your project. Provide specific details."},
+{ type: 'input', name: 'installation' , message: "How does someone install your project? Provide specific details."},
 { type: 'input', name: 'usage' , message: "Provide instructions and examples for use."},
 { type: 'list', name: 'license' , message: "What license are you using for this project?",
     choices: ['Apache License 2.0', 'Boose Software License 1.0', 'Creative Commons Zero v1.0 Universal', 'MIT License', 'Mozilla Public License 2.0']
@@ -20,40 +20,38 @@ const questions = [
 
 //function to lay out structure of README file
 const readmeContent = function generateREADME (data){
+
     return ` 
-    # Project Name
+# Project Name
     ${data.title}
     
-    ## License
+## License
     ${data.license}
 
-    ## Table of Contents
-    - [Description] (#description)
-    - [Installation] (#installation)
-    - [Usage] (#usage)
-    - [Contributing] (#contributing)
-    - [Credits] (#credits)
-    - [Questions] (#questions)
+## Table of Contents
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
 
-    ## Description 
+## Description 
     ${data.description}
 
-    ## Installation
-    ${data.install}
+## Installation
+    ${data.installation}
 
-    ## Usage
-    ${data.use}
+## Usage
+    ${data.usage}
 
-    ##Contributing
+## Contributing
     ${data.contributing}
 
-    ##Tests
+## Tests
     ${data.tests}
 
-    ## Credits 
-    ${data.credit}
-
-    ## Questions
+## Questions
     If you have any questions, please feel free to contact me!
     Github Username: ${data.username}
     Github Homepage: ${data.link}
