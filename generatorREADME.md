@@ -32,4 +32,3 @@
     Github Username: jeraldwhitley
     Github Homepage: https://github.com/jeraldwhitley
     Email: jlwj2468@gmail.com
-
